@@ -32,28 +32,29 @@ import org.apache.commons.pool2.BaseObject;
 public abstract class BaseObjectPoolConfig<T> extends BaseObject implements Cloneable {
 
     /**
-     * The default value for the {@code lifo} configuration attribute.
+     * The default value for the {@code lifo}(后进先出) configuration attribute.
+     *
      * @see GenericObjectPool#getLifo()
      * @see GenericKeyedObjectPool#getLifo()
      */
     public static final boolean DEFAULT_LIFO = true;
 
     /**
-     * The default value for the {@code fairness} configuration attribute.
+     * The default value for the {@code fairness}(公平) configuration attribute.
      * @see GenericObjectPool#getFairness()
      * @see GenericKeyedObjectPool#getFairness()
      */
     public static final boolean DEFAULT_FAIRNESS = false;
 
     /**
-     * The default value for the {@code maxWait} configuration attribute.
+     * The default value for the {@code maxWait}(最长等待) configuration attribute.
      * @see GenericObjectPool#getMaxWaitMillis()
      * @see GenericKeyedObjectPool#getMaxWaitMillis()
      */
     public static final long DEFAULT_MAX_WAIT_MILLIS = -1L;
 
     /**
-     * The default value for the {@code minEvictableIdleTimeMillis}
+     * The default value for the {@code minEvictableIdleTimeMillis} (最短可驱逐的空闲时间)
      * configuration attribute.
      * @see GenericObjectPool#getMinEvictableIdleTimeMillis()
      * @see GenericKeyedObjectPool#getMinEvictableIdleTimeMillis()
@@ -62,7 +63,7 @@ public abstract class BaseObjectPoolConfig<T> extends BaseObject implements Clon
             1000L * 60L * 30L;
 
     /**
-     * The default value for the {@code softMinEvictableIdleTimeMillis}
+     * The default value for the {@code softMinEvictableIdleTimeMillis} (soft最短可驱逐的空闲时间)
      * configuration attribute.
      * @see GenericObjectPool#getSoftMinEvictableIdleTimeMillis()
      * @see GenericKeyedObjectPool#getSoftMinEvictableIdleTimeMillis()
@@ -70,7 +71,7 @@ public abstract class BaseObjectPoolConfig<T> extends BaseObject implements Clon
     public static final long DEFAULT_SOFT_MIN_EVICTABLE_IDLE_TIME_MILLIS = -1;
 
     /**
-     * The default value for {@code evictorShutdownTimeoutMillis} configuration
+     * The default value for {@code evictorShutdownTimeoutMillis}(驱逐器超时关闭时间)configuration
      * attribute.
      * @see GenericObjectPool#getEvictorShutdownTimeoutMillis()
      * @see GenericKeyedObjectPool#getEvictorShutdownTimeoutMillis()
@@ -117,7 +118,7 @@ public abstract class BaseObjectPoolConfig<T> extends BaseObject implements Clon
     public static final boolean DEFAULT_TEST_WHILE_IDLE = false;
 
     /**
-     * The default value for the {@code timeBetweenEvictionRunsMillis}
+     * The default value for the {@code timeBetweenEvictionRunsMillis}(执行驱逐时间间隔)
      * configuration attribute.
      * @see GenericObjectPool#getTimeBetweenEvictionRunsMillis()
      * @see GenericKeyedObjectPool#getTimeBetweenEvictionRunsMillis()
